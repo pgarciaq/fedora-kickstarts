@@ -10,10 +10,12 @@ gstreamer1-plugins-bad-freeworld
 # Package groups excluded from @workstation-product-environment
 -@guest-desktop-agents
 -@libreoffice
+-gstreamer1-plugins-bad-free
 # Packages excluded from @workstation-product
 -rhythmbox
 -unoconv
 # Packages excluded from @gnome-desktop
+-snapshot
 -gnome-boxes
 -baobab
 -cheese
