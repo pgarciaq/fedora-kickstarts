@@ -1,12 +1,7 @@
 %include fedora-live-workstation.ks
-repo --name="rpmfusion-free" --mirrorlist=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arch=$basearch
-repo --name="rpmfusion-nonfree" --mirrorlist=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-$releasever&arch=$basearch
+repo --name="rpmfusion-free" --mirrorlist=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arch=$basearch&country=US,IE,DE,NL,ES
+repo --name="rpmfusion-nonfree" --mirrorlist=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-$releasever&arch=$basearch&country=US,IE,DE,NL,ES
 %packages
-# Packages we want to have
-mpv
-libavcodec-freeworld
-mesa-va-drivers-freeworld
-gstreamer1-plugins-bad-freeworld
 # Package groups excluded from @workstation-product-environment
 -@guest-desktop-agents
 -@libreoffice
@@ -24,4 +19,11 @@ gstreamer1-plugins-bad-freeworld
 -rygel
 -totem
 -gnome-maps
+-mesa-filesystem
+# Packages we want to have
+mpv
+libavcodec-freeworld
+mesa-va-drivers-freeworld
+gstreamer1-plugins-bad-freeworld
+includepkgs=mesa-filesystem
 %end
